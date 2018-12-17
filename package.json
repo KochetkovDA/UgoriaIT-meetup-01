@@ -5,6 +5,7 @@
   "description": "Presentation for UgoriaIT-meetup",
   "private": true,
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1",

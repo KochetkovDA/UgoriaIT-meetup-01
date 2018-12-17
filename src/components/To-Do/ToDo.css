@@ -1,0 +1,74 @@
+.to-do--container {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e2e2e2;
+    border-radius: 10px;
+}
+
+.to-do--container h3 {
+    margin: 0 auto;
+    font-weight: 400;
+    color: #727272;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #727272;
+}
+
+.to-do--input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #e2e2e2;
+    border-radius: 50px;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.to-do--input-group input {
+    color: #727272;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: 300;
+    padding: 5pt 15pt 5pt 5pt;
+    font-size: 22px;
+    outline: none;
+    height: 18px;
+    border: none;
+}
+
+
+.to-do--input-group .button {
+    height: 35px;
+    min-width: 88px;
+    text-align: center;
+    border-radius: 60px;
+    border: 1px solid #e2e2e2;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    color: #e2e2e2;
+    font-size: 12px;
+    font-weight: 300;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    text-decoration: none;
+}
+
+.to-do--input-group .button:hover {
+    background: linear-gradient(to top, #1fa2ff, #12d8fa, #a6ffcb);
+    padding: 0 7px 0 7px;
+    border: none;
+    color: #fff;
+}
+.to-do--tasksBlock {
+    list-style:none;
+    padding: 0;
+}

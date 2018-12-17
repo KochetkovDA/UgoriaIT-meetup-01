@@ -1,0 +1,59 @@
+@import "../../../node_modules/font-awesome/css/font-awesome.min.css";
+
+.task--container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #727272;
+    width:auto;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+    margin: 10px 0 10px 0;
+    padding: 10px 10px 10px 20px;
+    border: 1px solid #e2e2e2;
+    border-radius: 50px;
+}
+.task-btn {
+    height: 35px;
+    width: 35px;
+    margin: 0 2px 0 2px;
+    text-align: center;
+    border-radius: 60px;
+    border: 1px solid #e2e2e2;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    color: #e2e2e2;
+    font-size: 18px;
+    font-weight: 300;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    text-decoration: none;
+}
+
+.task-btn:hover {
+    background: linear-gradient(to top, #1fa2ff, #12d8fa, #a6ffcb);
+    padding: 0 7px 0 7px;
+    border: none;
+    color: #fff;
+}
+.task-btn.delete:hover {
+    background: linear-gradient(to bottom, #ec253c, #f13417);
+    border: none;
+    color: #fff;
+}
+.task-btn.edit:hover {
+    background: linear-gradient(to bottom, #fdc830, #f37335);
+    border: none;
+    color: #fff;
+}
+.task-btn.changeBtn {
+    height: 35px;
+    min-width: 88px;
+}
+.task-done {
+    background: linear-gradient(to left, #dcf5e4, #98f1ba);
+    text-decoration: line-through;
+    color: rgb(78, 77, 77);
+}
