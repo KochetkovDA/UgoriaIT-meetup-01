@@ -1,0 +1,29 @@
+.presentationCard--wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 15px;
+    align-items: center;
+}
+.presentationCard--wrapper .textBlock {
+    text-align: start;
+}
+.presentationCard--wrapper h1,h2,h3,h4,h5,h6{
+    margin: 5px;
+}
+.presentationCard--wrapper h4 {
+    font-size: 25px;
+}
+.presentationCard--wrapper h5 {
+    font-size: 20px;
+}
+.presentationCard--wrapper h6 {
+    font-size: 18px;
+}
+
+.avatar {
+    margin-left: 15px;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
