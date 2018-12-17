@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import "./presentation.style.css";
 import avatarPhoto from "../img/avatar.png";
+import jsxBabelImg from "../img/jsx_with_babell.png"
 import BusinessCard from "../components/BusinessCard/businessCard";
+import ToDoApp from "../components/To-Do/ToDo"
 
 // Import Spectacle Core tags
 import {
@@ -13,6 +15,7 @@ import {
   List,
   Quote,
   Slide,
+  Image,
   Text
 } from "spectacle";
 
@@ -35,37 +38,43 @@ const theme = createTheme({
 export default class Presentation extends Component  {
   render() {
     return (
-      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
+      <Deck transition={["zoom", "slide"]} transitionDuration={500} progress="bar" theme={theme}>
+
         <Slide transition={["slide"]} Layout bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Это - React JS
+            Поговорим о React JS
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            Сказ о том как junior, ReactJS готовил
+            Сказ о том как junior, ReactJS осваивал
           </Text>
           <BusinessCard img={avatarPhoto}
                         name="Кочетков Данил"
                         position="junior front-end developer"
-                        company='ГСК "Югория"' />
+                        company='ГСК "Югория"'
+          />
         </Slide>
+
         <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={4} textColor="secondary" caps>Что такое ReactJS?</Heading>
-          <List>
-            <ListItem>Не фреймворк</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+          <Heading size={4} textColor="primary" caps>Что такое ReactJS?</Heading>
+          <List textColor="primary">
+            <ListItem>Не MVC фреймворк - Библиотека</ListItem>
+            <ListItem>Отвечает только за представление</ListItem>
+            <ListItem>Virtual DOM</ListItem>
+            <ListItem>Компонентный подход</ListItem>
+            <ListItem>JSX (JavaScript XML)</ListItem>
           </List>
-          <Text size={6} textAlign="left" textColor="secondary">Standard text</Text>
+        </Slide>
+        <Slide align="center center">
+            <div align="center">
+                <ToDoApp />
+            </div>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
-          </List>
+          <Heading size={4} textColor="tertiary" caps> Подробнее про JSX? </Heading>
+          <Text textAlign="left" margin="10px 0 0" textColor="secondary">
+            JSX - это просто синтаксический сахар для функции React.createElement(component, props, ...children).
+          </Text>
+          <Image src={jsxBabelImg} />
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
