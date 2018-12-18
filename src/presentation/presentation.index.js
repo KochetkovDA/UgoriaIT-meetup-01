@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "./presentation.style.css";
 
-//import component for example
+//import component
 import ToDoApp from "../components/To-Do/ToDo"
 import BusinessCard from "../components/BusinessCard/businessCard";
 
@@ -13,6 +13,7 @@ import FLUXImg from "../img/FLUX.png"
 
 // Import Spectacle Core tags
 import {
+  Appear,
   Deck,
   Heading,
   ListItem,
@@ -22,11 +23,7 @@ import {
   Text
 } from "spectacle";
 
-// Import theme
 import createTheme from "spectacle/lib/themes/default";
-
-// Require CSS
-
 
 const theme = createTheme({
   primary: "white",
@@ -34,11 +31,11 @@ const theme = createTheme({
   tertiary: "#03A9FC",
   quaternary: "#CECECE"
 }, {
-  primary: "Oswald",
-  secondary: "Helvetica"
-});
+    primary: "Oswald",
+    secondary: "Helvetica"
+  });
 
-export default class Presentation extends Component  {
+export default class Presentation extends Component {
   render() {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} progress="bar" theme={theme}>
@@ -51,37 +48,47 @@ export default class Presentation extends Component  {
             Сказ о том как junior, ReactJS осваивал
           </Text>
           <BusinessCard img={avatarPhoto}
-                        name="Кочетков Данил"
-                        position="junior front-end developer"
-                        company='ГСК "Югория"'
+            name="Кочетков Данил"
+            position="junior front-end developer"
+            company='ГСК "Югория"'
           />
         </Slide>
 
         <Slide transition={["slide"]} bgColor="tertiary">
           <Heading size={4} textColor="primary" caps>Что такое ReactJS?</Heading>
           <List textColor="primary">
-            <ListItem>Не MVC фреймворк - Библиотека</ListItem>
-            <ListItem>Отвечает только за представление</ListItem>
-            <ListItem>Virtual DOM</ListItem>
-            <ListItem>Компонентный подход</ListItem>
-            <ListItem>JSX (JavaScript XML)</ListItem>
+            <Appear>
+              <ListItem>Не MVC фреймворк - Библиотека</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Отвечает только за представление</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Virtual DOM</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Компонентный подход</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>JSX (JavaScript XML)</ListItem>
+            </Appear>
           </List>
         </Slide>
 
         <Slide transition={["slide"]} bgColor="primary" textColor="primary">
-        <Heading size={4} textColor="tertiary" caps> MVC vs Flux </Heading>
-        <Text textAlign="left" margin="10px 0 0" textColor="secondary">
+          <Heading size={4} textColor="tertiary" caps> MVC vs Flux </Heading>
+          <Text textAlign="left" margin="10px 0 0" textColor="secondary">
             MVC  Flux
           </Text>
         </Slide>
 
         <Slide transition={["slide"]} bgColor="primary" textColor="primary">
-        <Heading size={4} textColor="tertiary" caps> MVC </Heading>
+          <Heading size={4} textColor="tertiary" caps> MVC </Heading>
           <Image margin="35px 0 0" src={MVCImg} />
         </Slide>
 
         <Slide transition={["slide"]} bgColor="primary" textColor="primary">
-        <Heading size={4} textColor="tertiary" caps> Flux </Heading>
+          <Heading size={4} textColor="tertiary" caps> Flux </Heading>
           <Image margin="35px 0 0" src={FLUXImg} />
         </Slide>
 
@@ -93,14 +100,14 @@ export default class Presentation extends Component  {
           <Image src={jsxBabelImg} />
         </Slide>
         <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
-        <Heading size={4} textColor="tertiary" caps>  Model-View-Controller </Heading>
+          <Heading size={4} textColor="tertiary" caps>  Model-View-Controller </Heading>
 
         </Slide>
 
         <Slide transition={["slide"]} align="center center">
-            <div align="center">
-                <ToDoApp />
-            </div>
+          <div align="center">
+            <ToDoApp />
+          </div>
         </Slide>
 
       </Deck>
