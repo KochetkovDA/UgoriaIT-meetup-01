@@ -48,7 +48,6 @@ const theme = createTheme({
 
 export default class Presentation extends Component {
   render() {
-    console.log(text)
     return (
       <Deck transition={[]} transitionDuration={500} progress="pacman" theme={theme}>
 
