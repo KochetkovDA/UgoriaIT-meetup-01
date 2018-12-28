@@ -1,8 +1,6 @@
 
 import React, { Component } from 'react';
 import "./presentation.style.css";
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import text from "raw-loader!../codeExample/some.txt";
 
 //import component
 import ToDoApp from "../components/To-Do/ToDo"
