@@ -4,6 +4,7 @@
   "author": "Kochetkov Danil Alexandrovich",
   "description": "Presentation for UgoriaIT-meetup",
   "private": true,
+  "homepage": "http://KochetkovDA.github.io/UgoriaIT-meetup-01",
   "dependencies": {
     "font-awesome": "^4.7.0",
     "raw-loader": "^1.0.0",
@@ -17,6 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -27,5 +30,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }
