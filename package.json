@@ -6,10 +6,12 @@
   "private": true,
   "dependencies": {
     "font-awesome": "^4.7.0",
+    "raw-loader": "^1.0.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1",
-    "spectacle": "^5.2.2"
+    "spectacle": "^5.2.2",
+    "spectacle-code-slide": "^0.5.2"
   },
   "scripts": {
     "start": "react-scripts start",

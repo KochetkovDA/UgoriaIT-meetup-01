@@ -12,7 +12,7 @@ export default class ToDo extends Component {
     this.deleteTask = this.deleteTask.bind(this);
     this.state = {
       newTask: '',
-      tasksList: []
+      tasksList: [{task: "Рассказать доклад", state: 1}, {task: "Ответить на вопросы"}, {task: "Получить фидбэк"}]
     }
   }
   addTask() {

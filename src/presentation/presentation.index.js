@@ -1,5 +1,8 @@
+
 import React, { Component } from 'react';
 import "./presentation.style.css";
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import text from "raw-loader!../codeExample/some.txt";
 
 //import component
 import ToDoApp from "../components/To-Do/ToDo"
@@ -10,6 +13,16 @@ import avatarPhoto from "../img/avatar.png";
 import jsxBabelImg from "../img/jsx_with_babell.png"
 import MVCImg from "../img/MVC.png"
 import FLUXImg from "../img/FLUX.png"
+import JSXSimpleTags from "../img/JSX_SimpleTags.PNG"
+import JSXCustomTag from "../img/JSX_CustomTag.PNG"
+import propsExample from "../img/propsExample.PNG"
+import moreAboutProps from "../img/moreAboutProps.PNG"
+import propTypes from "../img/propTypes.PNG"
+import defaultProps from "../img/defaultProps.PNG"
+import refs from "../img/refs.PNG"
+import state1 from "../img/state1.PNG"
+import state2 from "../img/state2.PNG"
+import state3 from "../img/state3.PNG"
 
 // Import Spectacle Core tags
 import {
@@ -37,8 +50,9 @@ const theme = createTheme({
 
 export default class Presentation extends Component {
   render() {
+    console.log(text)
     return (
-      <Deck transition={["zoom", "slide"]} transitionDuration={500} progress="bar" theme={theme}>
+      <Deck transition={[]} transitionDuration={500} progress="pacman" theme={theme}>
 
         <Slide transition={["slide"]} Layout bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
@@ -76,15 +90,8 @@ export default class Presentation extends Component {
         </Slide>
 
         <Slide transition={["slide"]} bgColor="primary" textColor="primary">
-          <Heading size={4} textColor="tertiary" caps> MVC vs Flux </Heading>
-          <Text textAlign="left" margin="10px 0 0" textColor="secondary">
-            MVC  Flux
-          </Text>
-        </Slide>
-
-        <Slide transition={["slide"]} bgColor="primary" textColor="primary">
           <Heading size={4} textColor="tertiary" caps> MVC </Heading>
-          <Image margin="35px 0 0" src={MVCImg} />
+          <Image src={MVCImg} />
         </Slide>
 
         <Slide transition={["slide"]} bgColor="primary" textColor="primary">
@@ -99,9 +106,70 @@ export default class Presentation extends Component {
           </Text>
           <Image src={jsxBabelImg} />
         </Slide>
-        <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
-          <Heading size={4} textColor="tertiary" caps>  Model-View-Controller </Heading>
 
+        <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
+          <Heading size={4} textColor="tertiary" caps> Подробнее про JSX </Heading>
+          <Image style={{"margin-top": "25px", "min-width": "550px"}} src={JSXSimpleTags} />
+          <Text textAlign="center" margin="10px 0 0" textColor="primary">
+          <sapn style={{color: "#03A9FC"}}> {"<h1>"} </sapn> и <sapn style={{color: "#03A9FC"}}> {"<span>"} </sapn> - это встроенные компоненты jsx и пишутся с маленькой буквы.
+          </Text>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary" textColor="tertiary">
+          <Heading size={4} textColor="tertiary" caps> Подробнее про JSX </Heading>
+          <Image src={JSXCustomTag} />
+          <Text textAlign="cener" margin="10px 0 0" textColor="secondary">
+            Кастомные компоненты необходимо именовать с большой буквы
+          </Text>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
+          <Heading size={4} textColor="tertiary" caps> Props </Heading>
+          <Image style={{"margin-top": "25px", "min-width": "550px"}} src={propsExample} />
+          <Text textAlign="center" margin="10px 0 0" textColor="primary">
+            Props будут доступны внутри компоненты <sapn style={{color: "#03A9FC"}}> {"<CustomComponent>"} </sapn>, как <sapn style={{color: "#03A9FC"}}> {"this.pops.color, this.props.size"} </sapn> и т.д.
+          </Text>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading size={4} textColor="tertiary" caps> Props </Heading>
+          <Image style={{"margin-top": "25px", "min-width": "1050px"}} src={moreAboutProps} />
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="secondary">
+          <Heading size={4} textColor="tertiary" caps> PropTypes </Heading>
+          <Image style={{"margin-top": "25px"}} src={propTypes} />
+          <Text textAlign="center" margin="10px 0 0" textColor="primary">
+            При добавлении <sapn style={{color: "#03A9FC"}}> {".isRequired"} </sapn>, в строку  <sapn style={{color: "#03A9FC"}}> {"name: PropTypes.string.isRequired"} </sapn> можно задавать обязательные парматеры.
+          </Text>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="secondary">
+          <Heading size={4} textColor="tertiary" caps> defaultProps </Heading>
+          <Image style={{"margin-top": "25px"}} src={defaultProps} />
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="secondary">
+          <Heading size={4} textColor="tertiary" caps> Refs </Heading>
+          <Image style={{"margin-top": "25px"}} src={refs} />
+          <Text textAlign="center" margin="10px 0 0" textColor="primary">
+            React поддерживает специальный атрибут, который может быть присвоен любому компоненту. Атрибут <sapn style={{color: "#03A9FC"}}> {"ref"} </sapn> принимает функцию обратного вызова, и вызывает ее после того, как компонент монтируется в DOM или удаляется из него.
+          </Text>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading size={4} textColor="tertiary" caps> State </Heading>
+          <Image style={{"margin-top": "25px", "min-width": "1050px"}} src={state1} />
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading size={4} textColor="tertiary" caps> State </Heading>
+          <Image style={{"margin-top": "25px", "min-width": "1050px"}} src={state2} />
+        </Slide>
+
+       <Slide transition={["slide"]} bgColor="primary">
+          <Heading size={4} textColor="tertiary" caps> State </Heading>
+          <Image style={{"margin-top": "25px", "min-width": "1050px"}} src={state3} />
         </Slide>
 
         <Slide transition={["slide"]} align="center center">
